@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+body {
+	background-color: #333;
+	color: #333;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+#root {
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper {
+	flex: 1 0 auto;
+	/*make the content div flex so that the form can take the center alignment from flexbox properties. Add the centering here and avoid the margin: auto property */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#quote-box {
+	width: 450px;
+	background-color: aliceblue;
+	height: auto;
+	padding: 40px 50px;
+	border-radius: 10px;
+}
+
+#quote-box .quote-text {
+	text-align: center;
+	font-weight: 500;
+	font-size: 1.75em;
+	padding: 15px;
+}
+
+#quote-box .quote-author {
+	padding-top: 20px;
+	font-size: 1em;
+	text-align: right;
+	padding-right: 10px;
+}
+
+#quote-box .buttons {
+	display: flex;
+	padding: 10px;
+}
+
+#quote-box .buttons .button {
+	text-decoration: none;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	background-color: #333;
+	outline: none;
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.85em;
+	padding: 10px 18px 10px 18px;
+	margin-top: 30px;
+	opacity: 1;
+	cursor: pointer;
+}
+
+#quote-box #new-quote {
+	margin-left: auto
+}
+
+@media (max-width: 450px) {
+	#quote-box {
+		width: 100%;
+	}
+}
