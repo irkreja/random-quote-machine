@@ -1,4 +1,8 @@
-freeCodeCamp's Front End Libraries Project - Build a Random Quote Machine using React and Redux
+# freeCodeCamp's Front End Libraries Project - Build a Random Quote Machine using React and Redux
+-----------------------------------------------------------
+## Live Demo
+-----------------------------------------------------------
+https://codepen.io/rejaulkarim/full/vaewxo/
 -----------------------------------------------------------
 *   **Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: [https://codepen.io/freeCodeCamp/full/qRZeGZ](https://codepen.io/freeCodeCamp/full/qRZeGZ).
 *   Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
@@ -17,6 +21,4 @@ freeCodeCamp's Front End Libraries Project - Build a Random Quote Machine using 
 *   You can build your project by forking [this CodePen pen](http://codepen.io/freeCodeCamp/pen/MJjpwO). Or you can use this CDN link to run the tests in any environment you like: `https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js`
 *   Once you're done, submit the URL to your working project with all its tests passing.
 *   Remember to use the [Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514) method if you get stuck.
-
-Solution : [CodePen - Random Quote Machine using React and Redux](https://codepen.io/rejaulkarim/full/vaewxo/)
 
