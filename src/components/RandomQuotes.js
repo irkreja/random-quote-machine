@@ -1,15 +1,16 @@
-import React, { Component } from "react";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { fetchQuotes, newQuote } from "../actions/index";
-import Loading from "./Loading";
-import "../stylesheets/style.css";
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { fetchQuotes, newQuote } from '../actions/index';
+import Loading from './Loading';
+import '../stylesheets/style.css';
 
 class RandomQuotes extends Component {
   constructor() {
     super();
     this.getNewQuote = this.getNewQuote.bind(this);
   }
+
   componentDidMount() {
     this.props.fetchQuotes();
     this.getNewQuote();
@@ -17,9 +18,10 @@ class RandomQuotes extends Component {
   }
 
   getNewQuote() {
-    let randomQuoteIndex = Math.floor(Math.random() * 102);
+    const randomQuoteIndex = Math.floor(Math.random() * 102);
     this.props.newQuote(randomQuoteIndex);
   }
+
   render() {
     if (this.props.loading) {
       return <Loading />;
@@ -36,22 +38,16 @@ class RandomQuotes extends Component {
             </q>
           </div>
           <div className="quote-author" style={{ color: randomColor }}>
-            -
-            <span id="author"> {author}</span>
+            -<span id="author"> {author}</span>
           </div>
           <div className="buttons">
             <a
-              href={
-                'https://twitter.com/intent/tweet?hashtags=quotes,freecodecamp&related=freecodecamp&text="' +
-                quote +
-                '" %0D%0A- ' +
-                author +
-                "%0D%0A"
-              }
+              href={`https://twitter.com/intent/tweet?hashtags=quotes,freecodecamp&related=freecodecamp&text="${quote}" %0D%0A- ${author}%0D%0A`}
               className="button"
               id="tweet-quote"
               title="Tweet this quote!"
               target="_blank"
+              rel="noopener noreferrer"
               style={{ backgroundColor: randomColor }}
             >
               TWEET
@@ -75,20 +71,16 @@ const mapStateToProps = state => ({
   quotes: state.quotes.data,
   randomNumber: state.quotes.randomNumber,
   loading: state.quotes.loading,
-  randomColor: state.quotes.colors
+  randomColor: state.quotes.colors,
 });
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
     {
       fetchQuotes,
-      newQuote
+      newQuote,
     },
     dispatch
   );
-};
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(RandomQuotes);
+export default connect(mapStateToProps, mapDispatchToProps)(RandomQuotes);

@@ -1,24 +1,24 @@
-import { FETCH_QUOTES, NEW_QUOTE } from "../constants";
+import { FETCH_QUOTES, NEW_QUOTE } from '../constants';
 
 const initialState = {
   loading: true,
   error: false,
   data: [],
-  randomNumber: "",
+  randomNumber: '',
   colors: [
-    "#16a085",
-    "#27ae60",
-    "#2c3e50",
-    "#f39c12",
-    "#e74c3c",
-    "#9b59b6",
-    "#FB6964",
-    "#342224",
-    "#472E32",
-    "#BDBB99",
-    "#77B1A9",
-    "#73A857"
-  ]
+    '#16a085',
+    '#27ae60',
+    '#2c3e50',
+    '#f39c12',
+    '#e74c3c',
+    '#9b59b6',
+    '#FB6964',
+    '#342224',
+    '#472E32',
+    '#BDBB99',
+    '#77B1A9',
+    '#73A857',
+  ],
 };
 
 export default function(state = initialState, action) {
@@ -27,12 +27,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        data: action.payload
+        data: action.payload,
       };
     case NEW_QUOTE:
       return {
         ...state,
-        randomNumber: action.payload
+        randomNumber: action.payload,
       };
     default:
       return state;

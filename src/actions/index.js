@@ -1,14 +1,14 @@
-import { FETCH_QUOTES, NEW_QUOTE } from "../constants";
+import { FETCH_QUOTES, NEW_QUOTE } from '../constants';
 
 export const fetchQuotes = () => dispatch => {
   fetch(
-    "https://gist.githubusercontent.com/irkreja/5f35dc197c6be4ddc32a45acdd23fcd7/raw/0d9b85d4a9d9da9dc67fa0257df66ed80702ff3a/quotes.json"
+    'https://gist.githubusercontent.com/irkreja/5f35dc197c6be4ddc32a45acdd23fcd7/raw/0d9b85d4a9d9da9dc67fa0257df66ed80702ff3a/quotes.json'
   )
     .then(response => {
       if (!response.ok) {
         throw Error(response.statusText);
       }
-      console.log("ok");
+      console.log('ok');
       return response.json();
     })
     .then(data => {
@@ -21,9 +21,7 @@ export const fetchQuotes = () => dispatch => {
     });
 };
 
-export const newQuote = randomNo => {
-  return {
-    type: NEW_QUOTE,
-    payload: randomNo
-  };
-};
+export const newQuote = randomNo => ({
+  type: NEW_QUOTE,
+  payload: randomNo,
+});
