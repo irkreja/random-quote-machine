@@ -1,21 +1,44 @@
-
 # Build a Random Quote Machine using React and Redux
+
 freeCodeCamp's Front End Libraries Projects
 
 ## Install
-1. Download and unzip repo
-2. Go to unzipped folder
-4. Install required packages with `$ npm install`
+
+1. Download and unzip the repository.
+2. Go to the unzipped folder.
+3. Install the required packages:
+
+```bash
+npm install
+```
 
 ## Run
-1. Run  with `$ npm start`
-2. Now open [http://localhost:3000](http://localhost:3000).
 
-## Live Demo:
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Then open http://localhost:5173 in your browser.
+
+## Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+The production files will be generated in the `dist/` directory.
+
+## Live Demo
+
 https://codepen.io/rejaulkarim/full/vaewxo/
 
 ## Challenge Instructions
-* **Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: [https://codepen.io/freeCodeCamp/full/qRZeGZ](https://codepen.io/freeCodeCamp/full/qRZeGZ).
+
+* **Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/qRZeGZ.
 
 * Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
 
@@ -39,14 +62,26 @@ https://codepen.io/rejaulkarim/full/vaewxo/
 
 * **User Story #9:** My quote machine should fetch the new quote's author when the `#new-quote` button is clicked and display it in the `#author` element.
 
-* **User Story #10:** I can tweet the current quote by clicking on the `#tweet-quote`  `a` element. This `a` element should include the `"twitter.com/intent/tweet"` path in it's `href` attribute to tweet the current quote.
+* **User Story #10:** I can tweet the current quote by clicking on the `#tweet-quote` `a` element. This `a` element should include the `"twitter.com/intent/tweet"` path in its `href` attribute to tweet the current quote.
 
-* **User Story #11:** The `#quote-box` wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
+* **User Story #11:** The `#quote-box` wrapper element should be horizontally centered. Please run tests with the browser's zoom level at 100% and the page maximized.
 
 * You can build your project by forking [this CodePen pen](http://codepen.io/freeCodeCamp/pen/MJjpwO). Or you can use this CDN link to run the tests in any environment you like: `https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js`
 
 * Once you're done, submit the URL to your working project with all its tests passing.
 
 * Remember to use the [Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514) method if you get stuck.
+
 ---
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Technology
+
+This project was originally created with Create React App and has since been migrated to:
+
+* React 19
+* Redux 5
+* React Redux 9
+* Vite 8
+* Vitest
+
+The project no longer uses Create React App or `react-scripts`.
